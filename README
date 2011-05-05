@@ -7,3 +7,10 @@ rake db:migrate
 rails s
  + show scaffold
 
+now, edit time:
+
++ move new form to top of index
++ delete extra stuff from index
++ delete edit
++ delete new
++ edit show
