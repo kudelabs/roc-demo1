@@ -1,0 +1,77 @@
+body {
+	background-color: #0a64bf;
+	margin: 0;
+	padding: 0;
+}
+
+ .frame {
+	width: 40em;
+	margin: auto;
+	padding: 1em;
+}
+
+.frame h1{
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #fef;
+	text-align: right;
+}
+
+.page {
+	border: 2px solid #57a4f2;
+	margin-top: 2em;
+	padding: 2em;
+	
+	background-color: #ffe5c5;
+	color: #101;
+}
+
+.page h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.message_form label {
+	font-weight: bold;
+	font-size: 1.2em;
+	display: block;
+	margin-bottom: .5em;
+}
+
+.message_form textarea {
+	width: 100%;
+}
+
+.message_form .actions {
+	text-align: right;
+}
+
+.message_form .actions input{
+	font-size: 1.5em;
+	width: 12em;
+}
+
+.messages ul {
+	margin: 0; list-style:none; list-style-image: none; 
+	padding: 0;
+	margin-top: .5em;
+}
+.messages li {
+	border: 1px solid #57a4f2;
+	background-color: #fff;
+	margin-bottom: .5em;
+	padding: 1em;
+}
+.message_body {
+	font-size: 1.1em;
+}
+.message_body a, .message_body a.visited {
+	color: #101;
+}
+.timestamp {
+	margin-top: .5em;
+	font-size: .9em;
+	text-align: right;
+	font-style: italic;
+	color: #444;
+}
