@@ -1,0 +1,11 @@
+<div class="show">
+<p>
+  You said:
+  <div class="message_body"><%= @message.body %></div>
+  <div class="timestamp"><%=tiem_ago_in_words(@message.created_at)%> ago</div>
+</p>
+
+
+<%= link_to 'Back', messages_path %> | <%= link_to 'Delete this message', edit_message_path(@message) %> 
+
+</div>

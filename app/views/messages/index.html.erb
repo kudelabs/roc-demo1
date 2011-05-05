@@ -1,0 +1,18 @@
+<div class="weibo">
+
+<%= render 'form'%>
+
+<div class="message_list">
+	<ul>
+	<% @messages.reverse.each do |message| %>
+	  <li>
+	    <div>
+			<div class="message_body"<%=link_to message.body, message %></div>
+			<div class="timestamp">Posted <%=time_ago_in_words(message.updated_at)%> ago</div>
+		</div>
+	  </li>
+	<% end %>
+	</ul>
+</div>
+
+</div>
