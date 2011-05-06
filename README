@@ -1,5 +1,15 @@
-$ rails new rocweibo
+First, show app
+Then:
+$ rm -rf myweibo
+
+why!!!
+well, cause in about 20 min, i can have it back
+ 
+$ rails new myweibo
+$ bundle install
+$ rails server
  + look at dir structure, app dir, config dir, public dir
+ + edit public/index
 $ rails generate scaffold messages body:text
  + look at view, model, migration
 $ rake db:migrate
@@ -7,10 +17,10 @@ $ rake db:migrate
 $ rails server
  + show scaffold
 
-now, edit html:
-
-+ move new form to top of index
+now, edit html: 
 + delete extra stuff from index
++ move new form to top of index
++ redirect to index after create
 + delete edit
 + delete new
 + edit show (paste)
@@ -18,8 +28,7 @@ now, edit html:
 
 edit controller:
  
- + delete update
- + redirect to index after create
+ + delete update, edit, new
  + show .xml .json, remove
 
 Now, add replies
@@ -38,12 +47,14 @@ Edit HTML
  + add form to messages/show
 
 Now, add reply controller
-
 $ rails g controller -h
 $ rails g controller replies create destroy 
 
 Edit routes
++ nested resource 
 
-add nested route for replies 
+Edit HTML
++ reorg replies into partials (use templates)
++ add comment counts on messages/index
 
 
