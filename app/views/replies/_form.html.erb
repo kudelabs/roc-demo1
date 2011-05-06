@@ -1,9 +1,9 @@
 <%=form_for([msg, msg.replies.build]) do |f|%>
-    <div class="field">
+    <div class="field left">
       <%= f.label :body, "Add a reply:" %>
       <%= f.text_field :body, :maxlength => 40 %>
     </div>
-    <div class="actions">
-      <%= f.submit "Reply" %>
+    <div class="actions right" style="text-align:right">
+      <%= f.submit "Reply", :width=>"100%"%>
     </div>
 <% end %>

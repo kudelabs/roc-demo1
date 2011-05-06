@@ -1,3 +1,54 @@
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
 body {
 	background-color: #0a64bf;
 	margin: 0;
@@ -31,6 +82,14 @@ body {
 	padding: 0;
 }
 
+.clear {
+	margin:0;
+	line-height:0;
+	font-size:0;
+	padding:0;
+	clear: both;
+}
+
 .message_form label {
 	font-weight: bold;
 	font-size: 1.2em;
@@ -58,7 +117,7 @@ body {
 }
 .messages li {
 	border: 1px solid #57a4f2;
-	background-color: #fff;
+	background-color: #e7f4f2;
 	margin-bottom: .5em;
 	padding: 1em;
 }
@@ -73,20 +132,60 @@ body {
 	font-size: .9em;
 	text-align: right;
 	font-style: italic;
-	color: #444;
+	color: #666;
 }
 
 .show .message_body {
-	margin-top: .3em;
+	margin: .5em 0;
 	font-size:1.3em;
 	padding: .5em;
 	border: 1px solid #57a4f2;
-	background-color: #fff;
+	background-color: #e7f4f2;
 }
 
-.show .comments ul {
+.replies {
+	clear: both;
+	margin: 1em 0;
+}
+.show .replies ul {
 	list-style-type: none;
-	margin: 0;
 	padding: 0;
-	margin-left: 1em;
+	margin: 0;
+}
+.show .replies li {
+	clear: both;
+	margin: .5em 0;
+}
+
+.show .replies li .timestamp {
+	font-size: .8em;
+	margin: 0;
+}
+.show .replies .right{
+	width: 29%;
+	float:right;
+}
+
+.show .replies .left{
+	width: 70%;
+	float:left;
+}
+
+.nav {
+	margin-top: -1em;
+	margin-bottom: 1em;
+}
+
+.show .destroy {
+	font-size: .9em;
+	
+	width: 50%;
+	float:left;
+}
+
+
+.show .timestamp {
+	margin: 0;
+	width: 49%;
+	float: right;
 }

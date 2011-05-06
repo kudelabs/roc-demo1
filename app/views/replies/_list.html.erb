@@ -1,0 +1,23 @@
+
+<div class="replies">
+  <% if flash[:notice] %>
+      <div class='notice'><%=flash[:notice]%></div>
+  <% end %>
+  
+      <strong>Replies:</strong>
+      <ul>
+      <% msg.replies.each do |rep| %>
+        <li>
+	  		<div class="comment_body left">&raquo; &nbsp;<%=rep.body %></div>
+	  		<div class="timestamp right"><%=time_ago_in_words(rep.created_at)%> ago</div>
+            <div class="clear">&nbsp;</div>
+        </li>
+      <% end %>
+	
+        <li class="reply_form"> 
+          <%=render 'replies/form', :msg => msg %>
+          <div class="clear">&nbsp;</div>
+        </li>
+      </ul>
+        
+</div>
