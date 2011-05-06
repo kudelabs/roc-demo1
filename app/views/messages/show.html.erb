@@ -9,7 +9,8 @@
   <div class="message_body"><%= @message.body %></div>
   <div class="timestamp"><%=time_ago_in_words(@message.created_at)%> ago</div>
   <div class="destroy">
-    <%= link_to 'Delete this message', message_path(@message), :method => :delete %>
+    <%= link_to 'Delete this message', @message, :method => :delete,
+      :confirm => 'There is no undo, please confirm.' %>
   </div>
   <div class="clear">&nbsp;</div>
 </div>
