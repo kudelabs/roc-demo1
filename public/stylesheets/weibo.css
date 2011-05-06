@@ -119,16 +119,16 @@ body {
 	border: 1px solid #57a4f2;
 	background-color: #e7f4f2;
 	margin-bottom: .5em;
-	padding: 1em;
+	padding: .5em 1em;
 }
 .message_body {
 	font-size: 1.1em;
+	margin: .5em 0;
 }
 .message_body a, .message_body a.visited {
 	color: #101;
 }
 .timestamp {
-	margin-top: .5em;
 	font-size: .9em;
 	text-align: right;
 	font-style: italic;
@@ -178,14 +178,14 @@ body {
 
 .show .destroy {
 	font-size: .9em;
-	
-	width: 50%;
-	float:left;
 }
 
+ .message .right{
+	width: 50%;
+	float:right;
+}
 
-.show .timestamp {
-	margin: 0;
+ .message .left{
 	width: 49%;
-	float: right;
+	float:left;
 }

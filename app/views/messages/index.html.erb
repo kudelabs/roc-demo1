@@ -6,11 +6,12 @@
 	<h3>Public Timeline:</h3>
 	<ul>
 	<% @messages.reverse.each do |message| %>
-		<li>
+		<li class="message">
 			<div class="message_body"><%=link_to message.body, message %></div>
-			<div class="timestamp">Posted <%=time_ago_in_words(message.updated_at)%> ago</div>
-	    
-		</li>
+			<div class="count left"><%=pluralize(message.replies(true).size, "reply")%></div>
+			<div class="timestamp right">Posted <%=time_ago_in_words(message.updated_at)%> ago</div>
+            <div class="clear">&nbsp;</div>
+        </li>
 	<% end %>
 	</ul>
 </div>
