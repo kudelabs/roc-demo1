@@ -57,4 +57,8 @@ Edit HTML
 + reorg replies into partials (use templates)
 + add comment counts on messages/index
 
+If more time...
++ look at order by in active record
++ limit 30
+
 
