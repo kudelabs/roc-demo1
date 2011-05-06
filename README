@@ -41,6 +41,7 @@ Edit Model
  + add has_many relation
  + add belongs_to relation
  + add creation helper
+ + show console msg.replies.build(:body=>"this is from the command line")
 
 Edit HTML
  + add replies loop to messages/show
@@ -48,13 +49,13 @@ Edit HTML
 
 Now, add reply controller
 $ rails g controller -h
-$ rails g controller replies create destroy 
+$ rails g controller replies create 
 
 Edit routes
 + nested resource 
 
 Edit HTML
-+ reorg replies into partials (use templates)
++ refactor replies into partials (use templates)
 + add comment counts on messages/index
 
 If more time...

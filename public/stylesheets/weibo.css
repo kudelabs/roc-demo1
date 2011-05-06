@@ -123,11 +123,17 @@ body {
 }
 .message_body {
 	font-size: 1.1em;
-	margin: .5em 0;
+	padding: .5em 0;
 }
-.message_body a, .message_body a.visited {
+
+.messages li.message a, .messages li.message a:visited {
 	color: #101;
+	text-decoration: none;
 }
+.messages li.message a:hover {
+	text-decoration: underline;
+}
+
 .timestamp {
 	font-size: .9em;
 	text-align: right;

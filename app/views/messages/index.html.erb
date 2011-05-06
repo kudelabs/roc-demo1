@@ -6,11 +6,13 @@
 	<ul>
 	<% @messages.reverse.each do |message| %>
 		<li class="message">
-			<div class="message_body"><%=link_to message.body, message %></div>
-			<div class="count left"><%=pluralize(message.replies(true).size, "reply")%></div>
-			<div class="timestamp right">Posted <%=time_ago_in_words(message.updated_at)%> ago</div>
-            <div class="clear">&nbsp;</div>
-        </li>
+      	<%= link_to %{
+        	<div class='message_body'>#{message.body}</div>
+        	<div class="count left">#{pluralize(message.replies.size, 'reply')}</div>
+        	<div class="timestamp right">#{time_ago_in_words(message.created_at)}</div>
+        	<div class="clear">&nbsp;</div>
+      	}.html_safe, message %>
+    	</li>
 	<% end %>
 	</ul>
 </div>
