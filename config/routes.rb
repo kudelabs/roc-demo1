@@ -1,6 +1,10 @@
 Rocweibo::Application.routes.draw do
-  resources :messages
+  resources :messages do
+    resources :replies
+  end
 
+  root :to => "messages#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,7 +54,6 @@ Rocweibo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "messages#index"
 
   # See how all your routes lay out with "rake routes"
 

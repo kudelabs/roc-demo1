@@ -1,16 +1,49 @@
-rails new rocweibo
- + look at dir structure, app dir, config dir
-rails generate scaffold messages body:text
+$ rails new rocweibo
+ + look at dir structure, app dir, config dir, public dir
+$ rails generate scaffold messages body:text
  + look at view, model, migration
-rake db:migrate
+$ rake db:migrate
  + create DB
-rails s
+$ rails server
  + show scaffold
 
-now, edit time:
+now, edit html:
 
 + move new form to top of index
 + delete extra stuff from index
 + delete edit
 + delete new
-+ edit show
++ edit show (paste)
++ copy in new css
+
+edit controller:
+ 
+ + delete update
+ + redirect to index after create
+ + show .xml .json, remove
+
+Now, add replies
+$ rails generate -h
+$ rails g model -h
+$ rails g model reply body:text message:references
+$ rake db:migrate
+
+Edit Model
+ + add has_many relation
+ + add belongs_to relation
+ + add creation helper
+
+Edit HTML
+ + add replies loop to messages/show
+ + add form to messages/show
+
+Now, add reply controller
+
+$ rails g controller -h
+$ rails g controller replies create destroy 
+
+Edit routes
+
+add nested route for replies 
+
+

@@ -1,11 +1,33 @@
 <div class="show">
-<p>
+<div>
   You said:
   <div class="message_body"><%= @message.body %></div>
   <div class="timestamp"><%=time_ago_in_words(@message.created_at)%> ago</div>
-</p>
+</div>
+
+<div class="comments">
+  <% if flash[:notice] %>
+      <div class='notice'><%=flash[:notice]%></div>
+  <% end %>
+  
+      <strong>Replies:</strong>
+      <ul>
+      <% @message.replies.each do |rep| %>
+        <li>
+	  		<div class="comment_body"><%=rep.body %></div>
+	  		<div class="timestamp"><%=time_ago_in_words(rep.created_at)%> ago</div>
+        </li>
+      <% end %>
+	
+      <li>
+          <%=render 'replies/form', :msg => @message %>
+      </li>
+      </ul>
+        
+</div>
 
 
-<%= link_to 'Back', messages_path %> | <%= link_to 'Delete this message', edit_message_path(@message) %> 
+
+<%= link_to 'Back', messages_path %> | <%= link_to 'Delete this message', message_path(@message), :method => :delete %> 
 
 </div>

@@ -75,3 +75,18 @@ body {
 	font-style: italic;
 	color: #444;
 }
+
+.show .message_body {
+	margin-top: .3em;
+	font-size:1.3em;
+	padding: .5em;
+	border: 1px solid #57a4f2;
+	background-color: #fff;
+}
+
+.show .comments ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 1em;
+}
