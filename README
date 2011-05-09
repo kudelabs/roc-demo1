@@ -1,11 +1,13 @@
-First, show app
+See the accompanying keynote presentation in doc/
+
+First, show running miniblog app
 Then:
-$ rm -rf myweibo
+$ rm -rf miniblog
 
 why!!!
 well, cause in about 20 min, i can have it back
  
-$ rails new myweibo
+$ rails new miniblog
 $ bundle install
 $ rails server
  + look at dir structure, app dir, config dir, public dir
@@ -38,9 +40,8 @@ $ rails g model reply body:text message:references
 $ rake db:migrate
 
 Edit Model
- + add has_many relation
- + add belongs_to relation
- + add creation helper
+ + show belongs_to relation in replies.rb
+ + add has_many relation in 
  + show console msg.replies.build(:body=>"this is from the command line")
 
 Edit HTML
@@ -55,7 +56,7 @@ Edit routes
 + nested resource 
 
 Edit HTML
-+ refactor replies into partials (use templates)
++ refactor replies into partials 
 + add comment counts on messages/index
 
 If more time...
