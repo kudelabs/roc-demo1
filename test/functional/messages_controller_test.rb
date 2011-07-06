@@ -11,11 +11,6 @@ class MessagesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:messages)
   end
 
-  test "should get new" do
-    #get :new
-    assert_response :success
-  end
-
   test "should create message" do
     assert_difference('Message.count') do
       post :create, :message => @message.attributes
